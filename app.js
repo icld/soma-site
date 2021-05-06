@@ -1,4 +1,8 @@
 
+
+
+
+
 handleTextChange('social', 'Instagram←', 'Social')
 
 handleTextChange('contact', 'Msg me here ←', 'Contact')
@@ -40,3 +44,4 @@ function animateLetterOver(wordToAnimate) {
         })
     })
 }
+
