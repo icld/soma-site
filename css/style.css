@@ -1,0 +1,187 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Novecento sans', sans-serif;
+    /* display: flex; */
+    /* height: 100%; */
+}
+
+.container {
+    display: grid;
+    /* position: relative; */
+    height: 100vh;
+    max-width: 1340px;
+    padding-right: 40px;
+    padding-left: 40px;
+    background-color: transparent;
+    /* grid-template-columns: repeat (4, auto); */
+    grid-template-columns: repeat (4, auto);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    grid-template-rows: 300px 1fr;
+    grid-template-areas: "nav nav nav player" "content content content player";
+}
+
+.nav {
+    /* height: 200px; */
+    width: 100%;
+    height: 200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "john john logo" "about about logo" "gear gear contact " "discography discography . " "soma soma . ";
+    grid-column-gap: 20px;
+    position: relative;
+    z-index: 999;
+    max-width: 1340px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 60px;
+    grid-area: nav;
+}
+
+a.nav-li {
+    display: flex;
+    /* align-content: center;
+     text-align: left; */
+    /* justify-content: center; */
+    padding-top: 12px;
+    padding-bottom: 12px;
+    /* margin: auto 0; */
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 20px;
+    border-bottom: 1px solid black;
+}
+
+a {
+    text-decoration: none;
+    font-size: 24px;
+    color: #1b1f28;
+}
+
+.soma-logo-box {
+    display: flex;
+    justify-content: center;
+    grid-area: logo;
+    color: #1b1f28;
+    /* width: 100px; */
+    margin: auto 0;
+}
+
+.soma-img {
+    width: 130px;
+    /* text-shadow: rgb(11, 11, 11) 1px 0 10px; */
+}
+
+.soma {
+    grid-area: soma;
+}
+
+.about {
+    grid-area: about;
+    border-top: 1px solid black;
+}
+
+.gear {
+    grid-area: gear;
+    /* border-top: 1px solid black; */
+}
+
+.discography {
+    grid-area: discography;
+}
+
+.contact {
+    grid-area: contact;
+    border-top: 1px solid black;
+}
+
+.nav-logo-home {
+    display: grid;
+    /* width: 100%;
+     height: 100%; */
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    /* position: relative; */
+    justify-content: center;
+    /* margin: 20px 0 10px; */
+    grid-area: john;
+    font-weight: 600;
+    grid-template-areas: "nav-logo";
+}
+
+h1.nav-logo {
+    grid-area: nav-logo;
+    margin: 20px 0px 10px;
+}
+
+.span-jump {
+    text-shadow: none;
+    transition: text-shadow 0.5s ease
+}
+
+.span-fx {
+    text-shadow: rgb(11, 11, 11) 1px 0 10px;
+}
+
+.player-container {
+    grid-area: player;
+}
+
+.player-div {
+    position: sticky;
+    top: 0
+}
+
+iframe {
+    font-size: 4px;
+    background: transparent;
+    border: none;
+    outline: none;
+    min-height: 350px;
+    height: 750px;
+    width: 250px;
+    font-size: 2px;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-area: content;
+    grid-template-areas: "main-photo" "abt-cont" "discog-cont" "gear-cont";
+}
+
+.main-photo {
+    object-fit: cover;
+    grid-area: main-photo;
+    width: 100%;
+    max-height: 100%;
+}
+
+.about-container {
+    grid-area: abt-cont;
+}
+
+.gear-container {
+    grid-area: gear-cont;
+}
+
+.discog-container {
+    grid-area: discog-cont;
+}
+
+p {
+    font-size: 24px;
+    text-align: left;
+    flex-wrap: wrap;
+}
+
+@media (min-width: 992px) {
+    .container {
+        grid-template-areas:
+    }
+}
