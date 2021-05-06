@@ -1,7 +1,12 @@
 
 handleTextChange('social', 'Instagram←', 'Social')
 
-handleTextChange('contact', 'Message me here ←', 'Contact')
+handleTextChange('contact', 'Msg me here ←', 'Contact')
+
+handleTextChange('gear', 'Gear ←', 'Gear')
+handleTextChange('discography', 'Discography ←', 'Discography')
+handleTextChange('about', 'About ←', 'About')
+
 
 function handleTextChange(element, msg1, msg2) {
     const elmt = document.querySelector(`.${element}`)
@@ -12,7 +17,7 @@ function handleTextChange(element, msg1, msg2) {
 }
 
 const h1 = document.querySelector('h1')
-animateLetterOver(h1)
+// animateLetterOver(h1)
 
 function animateLetterOver(wordToAnimate) {
     wordToAnimate.innerHTML = wordToAnimate.innerText
